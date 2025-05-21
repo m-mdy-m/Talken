@@ -1,3 +1,3 @@
-module github.com/m-mdy-m/Talken
+module talken
 
 go 1.22.4

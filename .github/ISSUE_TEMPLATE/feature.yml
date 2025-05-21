@@ -1,0 +1,32 @@
+name: 🚀 Feature Request
+description: Got an idea to make Talken cooler? Say it loud.
+title: "[FEATURE] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We love new ideas. Don't hold back.
+
+  - type: input
+    id: usecase
+    attributes:
+      label: Use-case
+      description: What's the use-case behind this idea?
+      placeholder: e.g. I want to allow offline message queueing
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What's your idea?
+      description: Just tell us what you have in mind.
+      placeholder: It would be awesome if we had...
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Why is this important?
+      description: Who benefits? You? Everyone? The whole damn internet?
+      placeholder: Security, privacy, usability... anything matters.

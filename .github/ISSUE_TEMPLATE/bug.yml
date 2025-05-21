@@ -1,0 +1,55 @@
+name: 🐞 Bug Report
+description: Something's broken. Let's fix it.
+title: "[BUG] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Yo! If something's not working in Talken, drop it here with clear info. Let's squash it.
+
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: What OS / version you using?
+      placeholder: e.g. Ubuntu 22.04, macOS Ventura, Windows 11
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the issue like you're explaining it to a buddy.
+      placeholder: It crashes when I run X, or messages never send, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: What steps should I take to trigger it?
+      placeholder: |
+        1. Run this...
+        2. Do this...
+        3. Then this...
+        4. Boom 💥
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      description: Drop any logs or screenshots to help us out.
+      render: shell
+
+  - type: input
+    id: version
+    attributes:
+      label: Talken Version
+      placeholder: e.g. v0.1.2
+    validations:
+      required: true

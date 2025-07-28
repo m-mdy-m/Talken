@@ -1,65 +1,72 @@
-name: Bug report
-about: Report a problem encountered in Talken core or client integrations.
+name: "🐛 Bug Report"
+about: "Report a reproducible bug or unexpected behavior in Talken."
 title: "[BUG] "
-labels: ["bug"]
+labels:
+  - bug
+  - needs-triage
 assignees: []
+
 body:
   - type: markdown
     attributes:
       value: |
-        **Describe the bug**
-        A clear and concise description of what the bug is and where you encountered it.
+        Thanks for reporting an issue! Please fill in the sections below.
 
   - type: input
+    id: description
+    attributes:
+      label: "### Description"
+      description: "A clear and concise description of what the bug is."
+      placeholder: "E.g. Sending a message to a peer crashes the app"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "### Steps to Reproduce"
+      description: "List the precise steps to reproduce the behavior."
+      placeholder: |
+        1. Open Talken core example on two devices  
+        2. Connect them over LAN  
+        3. Send a message from Device A to Device B  
+    validations:
+      required: true
+
+  - type: input
+    id: expected
+    attributes:
+      label: "### Expected Behavior"
+      placeholder: "What you expected to happen."
+
+  - type: input
+    id: actual
+    attributes:
+      label: "### Actual Behavior"
+      placeholder: "What actually happened."
+
+  - type: textarea
     id: environment
     attributes:
-      label: Environment
-      description: |
-        - Operating system & version  
-        - Runtime (Node.js / Rust / other) & version  
-        - Transport in use (LAN, WiFi Direct, Bluetooth)  
+      label: "### Environment"
+      description: "Please provide OS, Node/Rust version, hardware details, transport (WiFi/BLE) used, etc."
+      placeholder: |
+        - OS: Ubuntu 22.04  
+        - Node.js v18.5.0  
+        - Transport: LAN over personal hotspot  
     validations:
       required: true
 
   - type: textarea
-    id: steps-to-reproduce
+    id: logs
     attributes:
-      label: Steps to reproduce
-      description: |
-        List all steps needed to reproduce the issue, for example:
-        1. Generate a new peer key pair  
-        2. Start two nodes on a LAN  
-        3. Send a message from A to B  
-        4. Observe failure or error  
-    validations:
-      required: true
-
-  - type: input
-    id: expected-behavior
-    attributes:
-      label: Expected behavior
-      description: What you expected to happen.
+      label: "### Logs / Error Messages"
+      description: "Any logs, stack traces or error messages."
+      placeholder: "Paste relevant console output here."
 
   - type: textarea
-    id: logs-or-screenshots
+    id: additional
     attributes:
-      label: Logs & error output
-      description: Attach any relevant logs, stack traces, or screenshots here.
-
-  - type: dropdown
-    id: severity
-    attributes:
-      label: Severity
-      description: How severe is this bug?
-      options:
-        - blocker
-        - critical
-        - major
-        - minor
-        - trivial
-
-  - type: textarea
-    id: additional-context
-    attributes:
-      label: Additional context
-      description: Any other information that might help diagnose the issue.
+      label: "### Additional Context"
+      description: "Add any other context about the problem here."
+      placeholder: "E.g. Occurs only when more than two peers are connected."

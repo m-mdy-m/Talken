@@ -1,26 +1,62 @@
 # Security Policy
 
-## Supported Versions
+## Reporting a Vulnerability
 
-| Version | Supported |
-|---------|-----------|
-| 0.x     | ✅ Yes     |
+If you discover a security vulnerability in **Talken**, please report it privately to:
 
-We follow a rolling release model during early development (v0.x).
+
+Email: [bitsgenix@gmail.com](mailto:bitsgenix@gmail.com)
+Subject: Talken Security Vulnerability Report
+
+Do **not** open a public issue for security vulnerabilities.
 
 ---
 
-## Reporting a Vulnerability
+## Supported Versions
 
-If you discover a security vulnerability in Talken, **please do not open a public issue**. Instead:
+| Version   | Supported          |
+|-----------|--------------------|
+| `main`    | Yes (development)  |
+| `v1.x`    | Yes (release)      |
+| `< v1.0`  | No                 |
 
-- Email us at: **bitsgenix@gmail.com**
-- Include:
-  - Description of the vulnerability
-  - Steps to reproduce it
-  - Suggested mitigation (if possible)
-  - Your PGP key (optional, for encrypted response)
+You should upgrade to the latest `main` or `v1.x` release as soon as fixes are published.
 
-We will respond within **72 hours** and coordinate a fix ASAP.
+---
 
+## Security Release Process
 
+1. **Report**                     – Vulnerability reported privately via email.  
+2. **Acknowledge**               – We will respond within 48 hours.  
+3. **Fix**                       – We develop, test, and QA a patch.  
+4. **Public Release**            – Create a security release (tagged `vX.Y.Z-security`), update CHANGELOG.  
+5. **Notification**              – Notify the community via GitHub release notes.
+
+---
+
+## Reporting Guidelines
+
+When reporting, please include:
+
+- A clear title and description.  
+- Steps to reproduce the issue.  
+- Impact assessment (data leakage, unauthorized access, etc.).  
+- Any suggested fixes or references.
+
+---
+
+## Data Exposure
+
+Talken stores minimal data locally. No central server holds messages. Nevertheless, keep your device secure and encrypted.
+
+---
+
+## External Dependencies
+
+- Keep dependencies up to date.  
+- Review changelogs of upstream libraries for security patches.  
+- If you find a vulnerability in a dependency, report it upstream and notify us.
+
+---
+
+Thank you for helping keep **Talken** safe!

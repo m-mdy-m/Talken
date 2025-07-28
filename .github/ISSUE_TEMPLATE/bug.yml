@@ -1,55 +1,65 @@
-name: 🐞 Bug Report
-description: Something's broken. Let's fix it.
+name: Bug report
+about: Report a problem encountered in Talken core or client integrations.
 title: "[BUG] "
-labels: [bug]
+labels: ["bug"]
+assignees: []
 body:
   - type: markdown
     attributes:
       value: |
-        Yo! If something's not working in Talken, drop it here with clear info. Let's squash it.
+        **Describe the bug**
+        A clear and concise description of what the bug is and where you encountered it.
 
   - type: input
-    id: env
+    id: environment
     attributes:
       label: Environment
-      description: What OS / version you using?
-      placeholder: e.g. Ubuntu 22.04, macOS Ventura, Windows 11
+      description: |
+        - Operating system & version  
+        - Runtime (Node.js / Rust / other) & version  
+        - Transport in use (LAN, WiFi Direct, Bluetooth)  
     validations:
       required: true
 
   - type: textarea
-    id: what-happened
+    id: steps-to-reproduce
     attributes:
-      label: What happened?
-      description: Describe the issue like you're explaining it to a buddy.
-      placeholder: It crashes when I run X, or messages never send, etc.
+      label: Steps to reproduce
+      description: |
+        List all steps needed to reproduce the issue, for example:
+        1. Generate a new peer key pair  
+        2. Start two nodes on a LAN  
+        3. Send a message from A to B  
+        4. Observe failure or error  
     validations:
       required: true
-
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to Reproduce
-      description: What steps should I take to trigger it?
-      placeholder: |
-        1. Run this...
-        2. Do this...
-        3. Then this...
-        4. Boom 💥
-    validations:
-      required: true
-
-  - type: textarea
-    id: logs
-    attributes:
-      label: Logs / Screenshots
-      description: Drop any logs or screenshots to help us out.
-      render: shell
 
   - type: input
-    id: version
+    id: expected-behavior
     attributes:
-      label: Talken Version
-      placeholder: e.g. v0.1.2
-    validations:
-      required: true
+      label: Expected behavior
+      description: What you expected to happen.
+
+  - type: textarea
+    id: logs-or-screenshots
+    attributes:
+      label: Logs & error output
+      description: Attach any relevant logs, stack traces, or screenshots here.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - blocker
+        - critical
+        - major
+        - minor
+        - trivial
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Any other information that might help diagnose the issue.

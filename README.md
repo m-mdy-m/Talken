@@ -20,7 +20,6 @@ The actual core implementation is coming step by step.
 The project board for development is here:
 [https://github.com/users/m-mdy-m/projects/5](https://github.com/users/m-mdy-m/projects/5)
 
----
 
 ## Why Talken?
 
@@ -31,8 +30,6 @@ Talken is designed for situations where there is **no internet** or no reliable 
 * Private local networks
 
 In the future, Talken may also work over the internet, but for now the focus is **offline-only**.
-
----
 
 ## How it works (concept)
 
@@ -63,9 +60,7 @@ Each peer forwards the message to the next peer it knows.
 
 If the recipient is offline, a peer can store the message temporarily and deliver it later (store-and-forward).
 
----
-
-### ASCII flowchart (very simplified)
+### flow
 
 ```
 [ A ]  --->  [ B ]  --->  [ D ]  --->  [ C ]
@@ -80,7 +75,6 @@ If the recipient is offline, a peer can store the message temporarily and delive
 * Routing is dynamic. Every device keeps a list of nearby peers and updates it over time.
 * When the path is not direct, messages are sent through intermediate peers.
 
----
 
 ## Project status
 

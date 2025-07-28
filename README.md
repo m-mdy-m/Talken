@@ -76,22 +76,12 @@ If the recipient is offline, a peer can store the message temporarily and delive
 * When the path is not direct, messages are sent through intermediate peers.
 
 
-## Project status
+## Status
 
 Right now, **Talken is in the planning and design stage.**
 The code is not ready yet. The project structure, issues and drafts are being organized here:
 
 [https://github.com/users/m-mdy-m/projects/5](https://github.com/users/m-mdy-m/projects/5)
-
-The board is organized into these columns:
-
-* Backlog
-* Ready
-* In progress
-* In review
-* Done
-
----
 
 ## Contribution
 
@@ -103,7 +93,6 @@ You can open issues for:
 
 Pull requests are welcome once the core structure is ready.
 
----
 
 ## License
 

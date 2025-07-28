@@ -24,7 +24,7 @@ body:
   - type: textarea
     id: steps
     attributes:
-      label: "### Steps to Reproduce"
+      label: "Steps to Reproduce"
       description: "List the precise steps to reproduce the behavior."
       placeholder: |
         1. Open Talken core example on two devices  
@@ -36,19 +36,19 @@ body:
   - type: input
     id: expected
     attributes:
-      label: "### Expected Behavior"
+      label: "Expected Behavior"
       placeholder: "What you expected to happen."
 
   - type: input
     id: actual
     attributes:
-      label: "### Actual Behavior"
+      label: "Actual Behavior"
       placeholder: "What actually happened."
 
   - type: textarea
     id: environment
     attributes:
-      label: "### Environment"
+      label: "Environment"
       description: "Please provide OS, Node/Rust version, hardware details, transport (WiFi/BLE) used, etc."
       placeholder: |
         - OS: Ubuntu 22.04  
@@ -60,13 +60,13 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: "### Logs / Error Messages"
+      label: "Logs / Error Messages"
       description: "Any logs, stack traces or error messages."
       placeholder: "Paste relevant console output here."
 
   - type: textarea
     id: additional
     attributes:
-      label: "### Additional Context"
+      label: "Additional Context"
       description: "Add any other context about the problem here."
       placeholder: "E.g. Occurs only when more than two peers are connected."

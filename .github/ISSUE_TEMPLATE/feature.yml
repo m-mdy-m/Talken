@@ -1,32 +1,61 @@
-name: 🚀 Feature Request
-description: Got an idea to make Talken cooler? Say it loud.
+name: "✨ Feature Request"
+description: "Suggest a new feature or enhancement for Talken."
 title: "[FEATURE] "
-labels: [enhancement]
+labels:
+  - enhancement
+  - needs-triage
+assignees: []
+
 body:
   - type: markdown
     attributes:
       value: |
-        We love new ideas. Don't hold back.
+        Thank you for thinking of ways to improve Talken! Please complete the template below.
 
   - type: input
-    id: usecase
+    id: summary
     attributes:
-      label: Use-case
-      description: What's the use-case behind this idea?
-      placeholder: e.g. I want to allow offline message queueing
-
-  - type: textarea
-    id: proposal
-    attributes:
-      label: What's your idea?
-      description: Just tell us what you have in mind.
-      placeholder: It would be awesome if we had...
+      label: "Summary"
+      description: "A one‑sentence summary of the requested feature."
+      placeholder: "E.g. Add automatic peer reconnection on network drop"
     validations:
       required: true
 
   - type: textarea
-    id: benefit
+    id: motivation
     attributes:
-      label: Why is this important?
-      description: Who benefits? You? Everyone? The whole damn internet?
-      placeholder: Security, privacy, usability... anything matters.
+      label: "Motivation"
+      description: "Why is this feature important? What use cases does it enable?"
+      placeholder: "E.g. Improves reliability when peers frequently change networks"
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposed Solution"
+      description: "Describe your idea for how Talken could implement this."
+      placeholder: |
+        - Introduce a reconnection monitor in transport layer  
+        - On network change, attempt to re-discover existing peers  
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives Considered"
+      description: "Other options you considered and why they were not chosen."
+      placeholder: "E.g. Relying on application layer retries was too slow"
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impact"
+      description: "Which modules or user flows will this affect?"
+      placeholder: "E.g. transport module, peer management"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional Context"
+      description: "Any extra information or screenshots/mockups."
+      placeholder: "Sketch of UI change, links to libraries, etc."

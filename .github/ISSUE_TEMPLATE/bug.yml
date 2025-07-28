@@ -1,5 +1,5 @@
 name: "🐛 Bug Report"
-about: "Report a reproducible bug or unexpected behavior in Talken."
+description: "Report a reproducible bug or unexpected behavior in Talken."
 title: "[BUG] "
 labels:
   - bug

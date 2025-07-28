@@ -17,9 +17,6 @@ This is not a traditional chat app with a server. Talken is a **core library** t
 At this stage, Talken is in **early development**.
 Only documentation, design notes and planning are available.
 The actual core implementation is coming step by step.
-The project board for development is here:
-[https://github.com/users/m-mdy-m/projects/5](https://github.com/users/m-mdy-m/projects/5)
-
 
 ## Why Talken?
 

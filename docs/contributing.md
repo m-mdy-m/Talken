@@ -1,59 +1,138 @@
 # Contributing to Talken
 
-First of all, **thank you** for taking the time to contribute to Talken! This project exists because of amazing contributors like you.
+Welcome, and thank you for your interest in contributing to **Talken** – a peer-to-peer, offline-first messaging core designed to work without internet, servers, or even infrastructure. This guide provides all the information you need to contribute effectively.
 
-## 🛠️ How to Contribute
+Talken is **not a chat app**. It is a **core messaging engine** that client applications (mobile, desktop, CLI, etc.) can embed and use. It supports **local communication**, **Bluetooth relays**, **store-and-forward messaging**, and **multi-hop routing**, all in a decentralized, privacy-respecting manner.
 
-### 1. Fork & Clone
+---
 
-```bash
-git clone https://github.com/your-username/Talken.git
-cd Talken
+## Table of Contents
+
+- [Code of Conduct](#code-of-conduct)
+- [How Talken Works (Short Recap)](#how-talken-works-short-recap)
+- [Development Philosophy](#development-philosophy)
+- [How to Contribute](#how-to-contribute)
+  - [Issues](#issues)
+  - [Feature Suggestions](#feature-suggestions)
+  - [Pull Requests](#pull-requests)
+- [Semantic Branching](#semantic-branching)
+- [Semantic Commit Messages](#semantic-commit-messages)
+- [Project Structure](#project-structure)
+- [Environment Setup](#environment-setup)
+- [Code Style](#code-style)
+- [Testing](#testing)
+- [Security](#security)
+- [License](#license)
+
+---
+
+## Code of Conduct
+
+This project follows the [Contributor Covenant](https://www.contributor-covenant.org/) Code of Conduct. Please be respectful, inclusive, and supportive in your interactions.
+
+---
+
+## How Talken Works (Short Recap)
+
+- Every device generates a **public/private key pair**.
+- Devices discover nearby peers via **Bluetooth**, **LAN**, or **Hotspot**.
+- Messages are encrypted using the **recipient's public key**.
+- If a direct connection isn't available, the message can **hop through other devices** until it reaches its destination.
+- Offline devices can receive messages later via **store-and-forward**.
+- Talken does not rely on IPs or ports — just public keys and peer discovery.
+
+---
+
+## Development Philosophy
+
+- **Offline-first:** Works without internet.
+- **Decentralized:** No central server.
+- **Resilient:** Messages survive connectivity loss.
+- **Minimal:** No bloat. Lightweight core with pluggable extensions.
+- **Universal:** Can run on Linux, Android, CLI, etc.
+
+---
+
+## How to Contribute
+
+### Issues
+
+- Use [GitHub Issues](https://github.com/m-mdy-m/talken/issues) to:
+  - Report bugs
+  - Request features
+  - Discuss design questions
+
+Use labels like `bug`, `enhancement`, `question`, or `design`.
+
+### Feature Suggestions
+
+Before implementing new features, please open an issue to **discuss** and align with the core design principles. Talken is still in early stages and needs a **coherent direction**.
+
+### Pull Requests
+
+Pull requests (PRs) are welcome, **after the core is stabilized**. Until then, PRs should:
+- Be scoped to **one logical change**.
+- Include documentation and tests where applicable.
+- Respect the [branching](#semantic-branching) and [commit](#semantic-commit-messages) conventions.
+
+---
+
+## Semantic Branching
+
+Please use **semantic branch names** that indicate the purpose and type of change:
+
 ```
 
-### 2. Install Go and Dependencies
+<type>/<short-description>
 
-Make sure you have **Go 1.22+** installed. Run:
-
-```bash
-go mod tidy
-go build ./...
 ```
 
-### 3. Create a Feature Branch
+Examples:
+- `feat/multi-hop-routing`
+- `fix/discovery-crash`
+- `docs/architecture-notes`
+- `refactor/peer-db`
 
-```bash
-git checkout -b feature/your-amazing-idea
+Types:
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation
+- `test`: Test-related
+- `refactor`: Code reorganization/refactoring
+- `perf`: Performance improvements
+- `chore`: CI, build scripts, tooling
+
+---
+
+## Semantic Commit Messages
+
+Follow **Conventional Commits**:
+
 ```
 
-### 4. Write Your Code
+<type>(scope): short message
 
-- Follow [Effective Go](https://golang.org/doc/effective_go.html) practices
-- Format with `go fmt ./...`
-- Use `go vet ./...`
-- Write unit tests in `_test.go` files
-- Run all tests with `go test ./...`
-
-### 5. Commit with Meaningful Messages
-
-```bash
-git commit -m "feat(core): add identity struct and ID generation"
 ```
 
-### 6. Push and Create a Pull Request
+Examples:
+- `feat(router): implement message forwarding logic`
+- `fix(bluetooth): resolve discovery loop issue`
+- `docs(readme): add usage diagram`
 
-```bash
-git push origin feature/your-amazing-idea
-```
+Use these types:
+- `feat`: A new feature
+- `fix`: A bug fix
+- `docs`: Documentation changes
+- `style`: Formatting, whitespace
+- `refactor`: Code change without affecting behavior
+- `perf`: Performance improvement
+- `test`: Adding or updating tests
+- `chore`: Tooling or infrastructure work
 
-Then open a pull request to the `main` branch. Fill out the PR template.
+---
 
-## Communication
+## License
 
-If you have questions or ideas, open an [Issue](https://github.com/m-mdy-m/Talken/issues) or start a [Discussion](https://github.com/m-mdy-m/Talken/discussions).
+By contributing, you agree that your contributions will be licensed under the **MIT License**.
 
-## Security
-
-Please refer to [SECURITY.md](./SECURITY.md) to report vulnerabilities responsibly.
-
-Thank you for being part of Talken 🚀
+See `LICENSE` file for details.
